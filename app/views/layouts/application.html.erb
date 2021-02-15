@@ -15,7 +15,7 @@
       <div class = "current-login">
         <div class = "UserDiv">
           <p>
-            Welcome <%= @current_user.first_name %>
+            <%= @current_user.first_name %>
           </p>
           <p>
             <%= link_to "Sign-out", destroy_session_path, method: "delete" %>

@@ -1,9 +1,9 @@
 <main>
   <article>
     <%= form_with(url: "/todos", method: "post", class: "add-todo-section") do %>
-      <%= text_field_tag :todo_text, "", placeholder: "What's next" %>
+      <%= text_field_tag :todo_text, ""%>
       <%= date_field_tag :due_date, "" %>
-      <%= submit_tag :"Add" %>
+      <%= submit_tag :"insert" %>
     <% end %>
 
     <%= render partial: "section", locals: {
