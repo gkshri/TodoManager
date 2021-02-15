@@ -1,0 +1,24 @@
+<section class = "sign-up-form">
+  <%= form_with url: users_path do |form| %>
+    <div class = "sign-up-field">
+      <label> First Name </label>
+      <%= form.text_field :first_name %>
+    </div>
+    
+    <div class = "sign-up-field">
+      <label> Last Name </label>
+      <%= form.text_field :last_name %>
+    </div>
+
+    <div class = "sign-up-field">
+      <label> Email </label>
+      <%= form.email_field :email %>
+    </div>
+
+    <div class = "sign-up-field">
+      <label> Password </label>
+      <%= form.password_field :password %>
+    </div>
+    <%= form.submit "Sign-up!", class: "form-submit" %>
+  <% end %>
+</section>

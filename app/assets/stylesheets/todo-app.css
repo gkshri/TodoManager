@@ -1,0 +1,102 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+article h1 {
+  width: 129px;
+  height: 27px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+form.add-todo-section {
+  display: flex;
+  align-items: stretch;
+  margin: 10px 0px 20px;
+}
+
+form.add-todo-section input {
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+
+form.add-todo-section input[type=text] {
+  width: 190px;
+  height: 32px;
+  padding-left: 10px;
+}
+
+form.add-todo-section input[type=date] {
+  padding-left: 10px;
+  margin: 0px 10px;
+}
+
+form.add-todo-section input[type=submit] {
+  width: 72px;
+  background: #8348bb;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+section h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 7px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+div.total-completed {
+  font-size: 12px;
+}
+
+section div.heading {
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 10px 13px;
+  color: #453C52;
+  padding: 2px;
+}
+
+ul li:hover {
+  background: #fafafa;
+}
+
+ul li input {
+  margin-right: 7px;
+}
+
+ul li label {
+  margin: 0px 7px;
+}
+
+li p.due-date {
+  font-size: 11px;
+  margin-right: 7px;
+}
+
+li input[type=image] {
+  height: 20px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+ul li:hover input[type=image] {
+  visibility: visible;
+}
+
+li input[type="checkbox"] {
+  outline-color: #ffffff;
+}

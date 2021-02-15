@@ -1,0 +1,28 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  host: localhost
+  user: postgres
+  password: password
+  database: saas_db
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  host: localhost
+  user: postgres
+  password: password
+  database: test_saas_db
+
+production:
+  <<: *default
+  host: localhost
+  user: postgres
+  password: password
+  database: prod_saas_db

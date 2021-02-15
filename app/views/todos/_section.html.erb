@@ -1,0 +1,33 @@
+<section>
+  <div class = "heading">
+    <h2><%= heading %></h2>
+    <div class = "total-completed"> <%= todos.isCompleted.count %>/<%= todos.count %> </div>
+  </div>
+  <ul>
+    <% todos.each do |todo| %>
+      <li>
+        <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+          <%= 
+            check_box_tag :completed,
+            "completed", todo.completed ? true : false,
+            onclick: "this.form.submit()"
+          %>
+        <% end %>
+
+        <label style="text-decoration-line : <%= todo.completed ? 'line-through' : 'none' %>"> 
+          <%= todo.todo_text %>
+        </label>
+
+        <% if show_due_date %>
+          <p class="due-date">
+            <%= todo.due_date.to_s(:short) %>
+          </p>
+        <% end %>
+        
+        <%= form_with(url: "/todos/#{todo.id}", method: "delete") do |f| %>
+          <%= f.submit "Comment", :type => :image, :src => "trash.png" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</section>

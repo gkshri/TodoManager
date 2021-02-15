@@ -1,0 +1,27 @@
+<main>
+  <article>
+    <%= form_with(url: "/todos", method: "post", class: "add-todo-section") do %>
+      <%= text_field_tag :todo_text, "", placeholder: "What's next" %>
+      <%= date_field_tag :due_date, "" %>
+      <%= submit_tag :"Add" %>
+    <% end %>
+
+    <%= render partial: "section", locals: {
+      heading: "Overdue", 
+      todos: @todos.overdue,
+      show_due_date: true
+    }%>
+
+    <%= render partial: "section", locals: {
+      heading: "Due today", 
+      todos: @todos.due_today,
+      show_due_date: false
+    } %>
+
+    <%= render partial: "section", locals: {
+      heading: "Due later", 
+      todos: @todos.due_later,
+      show_due_date: true
+    } %>
+  </article>
+</main>

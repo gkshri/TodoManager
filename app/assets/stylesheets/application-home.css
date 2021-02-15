@@ -1,0 +1,15 @@
+.current-login {
+  display: block;
+  padding: 7px 2px;
+  margin: 10px 0px;
+  background: lightgray;
+}
+
+.current-login .UserDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.error-msg {
+  color: red;
+}
