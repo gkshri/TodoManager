@@ -20,9 +20,14 @@ test:
   password: password
   database: test_saas_db
 
+#production:
+ # <<: *default
+  #host: localhost
+  #user: postgres
+  #password: password
+  #database: prod_saas_db
 production:
-  <<: *default
+  database: example_production
+  adapter: postgresql
   host: localhost
-  user: postgres
-  password: password
-  database: prod_saas_db
+  password:
